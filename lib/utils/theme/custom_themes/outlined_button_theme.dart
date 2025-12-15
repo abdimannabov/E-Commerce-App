@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+//Light and Dark Outlined Button Themes
+
+class SOutlinedButtonTheme {
+  SOutlinedButtonTheme._(); //to avoid instantiation
+
+  //light theme
+  static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      elevation: 0,
+      foregroundColor: Colors.black,
+      side: BorderSide(color: Colors.blue),
+      textStyle: TextStyle(
+        fontSize: 16,
+        color: Colors.black,
+        fontWeight: FontWeight.w600,
+      ),
+      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.0)),
+    ),
+  );
+
+  static OutlinedButtonThemeData darkOutlinedButtonTheme =
+      OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          elevation: 0,
+          foregroundColor: Colors.white,
+          side: BorderSide(color: Colors.blueAccent),
+          textStyle: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+          padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14.0),
+          ),
+        ),
+      );
+}
