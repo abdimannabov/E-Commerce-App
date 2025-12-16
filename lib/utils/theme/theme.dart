@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 class SAppTheme {
   SAppTheme._(); //Private constructor
 
+  //configure light and dark themes
   static ThemeData lightTheme = ThemeData(
     fontFamily: 'Poppins',
     brightness: Brightness.light,
