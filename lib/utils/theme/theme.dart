@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/chip_theme.dart';
@@ -18,13 +19,13 @@ class SAppTheme {
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     textTheme: STextTheme.lightTextTheme,
-    appBarTheme: SAppTheme.lightTheme,
+    appBarTheme: SAppBarTheme.lightAppBarTheme,
     checkboxTheme: SCheckboxTheme.lightCheckboxTheme,
     elevatedButtonTheme: SElevatedButtonTheme.lightElevatedButtonTheme,
     bottomSheetTheme: SBottomSheetTheme.lightBottomSheetTheme,
     outlinedButtonTheme: SOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: STextFieldTheme.lightInputDecorationTheme,
-    chipTheme: SChipTheme.lightChipTheme
+    chipTheme: SChipTheme.lightChipTheme,
   );
   static ThemeData darkTheme = ThemeData(
     fontFamily: 'Poppins',
@@ -33,12 +34,12 @@ class SAppTheme {
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.black,
     textTheme: STextTheme.darkTextTheme,
-    appBarTheme: SAppTheme.darkTheme,
+    appBarTheme: SAppBarTheme.darkAppBarTheme,
     checkboxTheme: SCheckboxTheme.darkCheckboxTheme,
     elevatedButtonTheme: SElevatedButtonTheme.darkElevatedButtonTheme,
     bottomSheetTheme: SBottomSheetTheme.darkBottomSheetTheme,
     outlinedButtonTheme: SOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: STextFieldTheme.darkInputDecorationTheme,
-    chipTheme: SChipTheme.darkChipTheme
+    chipTheme: SChipTheme.darkChipTheme,
   );
 }

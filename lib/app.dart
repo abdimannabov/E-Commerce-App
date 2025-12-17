@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'features/authentication/screens/onboarding.dart';
 import 'utils/theme/theme.dart';
 
 /// ------Root dart file for the themes------
@@ -7,10 +9,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: SAppTheme.lightTheme,
       darkTheme: SAppTheme.darkTheme,
+      home: const OnboardingScreen(),
     );
   }
 }

@@ -26,6 +26,7 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.1.1
   flutter_native_splash: ^2.4.7
+  smooth_page_indicator: ^2.0.1
 
 #----------------End Packages----------------#
 
@@ -42,7 +43,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/logos/
+    - assets/images/on_boarding_images/
 
   #-----------------My Fonts-----------------#
   fonts:

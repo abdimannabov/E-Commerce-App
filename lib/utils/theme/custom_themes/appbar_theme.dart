@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 //Custom AppBar Theme
-class SAppBaraTheme {
-  SAppBaraTheme._(); // Private constructor
+class SAppBarTheme {
+  SAppBarTheme._(); // Private constructor
 
   static const lightAppBarTheme = AppBarTheme(
     backgroundColor: Colors.transparent,
