@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'features/authentication/screens/onboarding.dart';
+import 'features/authentication/screens/onboarding/onboarding.dart';
 import 'utils/theme/theme.dart';
 
 /// ------Root dart file for the themes------
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: SAppTheme.lightTheme,
       darkTheme: SAppTheme.darkTheme,
-      home: const OnboardingScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
