@@ -4,7 +4,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utilities.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
-import '../../../controllers.onboarding/onboarding_controller.dart';
+import '../../../controllers/onboarding/onboarding_controller.dart';
 
 class SmoothPageIndicatior extends StatelessWidget {
   const SmoothPageIndicatior({super.key});

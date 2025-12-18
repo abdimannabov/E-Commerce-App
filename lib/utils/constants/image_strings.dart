@@ -4,8 +4,8 @@ class SImages {
   static const String darkAppLogo = 'assets/logos/dark_app_logo.png';
 
   // My Social Logos
-  static const String googleLogo = 'assets/logos/google_logo.png';
-  static const String facebookLogo = 'assets/logos/facebook_logo.png';
+  static const String googleLogo = 'assets/icons/google-icon.png';
+  static const String facebookLogo = 'assets/icons/facebook-icon.png';
 
   // On Boarding Images
   static const String onBoardingImage1 =

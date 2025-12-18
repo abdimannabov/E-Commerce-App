@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/text_strings.dart';
-import '../../controllers.onboarding/onboarding_controller.dart';
+import '../../controllers/onboarding/onboarding_controller.dart';
 import 'widgets/next_button.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/onboarding_skip.dart';
