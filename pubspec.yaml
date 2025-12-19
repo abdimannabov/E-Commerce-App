@@ -44,6 +44,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/images/on_boarding_images/
+    - assets/images/pictures/
     - assets/logos/
 
   #-----------------My Fonts-----------------#

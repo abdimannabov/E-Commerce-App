@@ -1,4 +1,6 @@
+import 'package:e_commerce_app/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
@@ -89,7 +91,7 @@ class SSignupForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => VerifyEmailScreen()),
                 child: const Text(STexts.createAccount),
               ),
             ),

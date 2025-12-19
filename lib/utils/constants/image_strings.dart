@@ -14,4 +14,9 @@ class SImages {
       'assets/images/on_boarding_images/Payment.gif';
   static const String onBoardingImage3 =
       'assets/images/on_boarding_images/Delivery.gif';
+
+  // Verify email images
+  static const String verifyEmailImage =
+      'assets/images/pictures/verify-email.png';
+  static const String successEmailImage = 'assets/images/pictures/success.png';
 }

@@ -6,17 +6,13 @@ import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
 class SLoginForm extends StatelessWidget {
-  const SLoginForm({
-    super.key,
-  });
+  const SLoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: SSizes.spaceBtwSections,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: SSizes.spaceBtwSections),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -28,7 +24,7 @@ class SLoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: SSizes.spaceBtwInputFields),
-    
+
             // Password field
             TextFormField(
               decoration: const InputDecoration(
@@ -38,7 +34,7 @@ class SLoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: SSizes.spaceBtwInputFields / 2),
-    
+
             // Remember me & Forgot password
             Row(
               children: [
@@ -57,7 +53,7 @@ class SLoginForm extends StatelessWidget {
               ],
             ),
             const SizedBox(width: SSizes.spaceBtwSections),
-    
+
             // Sign in button (full-width, fixed height)
             SizedBox(
               width: double.infinity,
@@ -68,12 +64,12 @@ class SLoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: SSizes.spaceBtwItems),
-    
+
             // create account button
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(SignupScreen()),
+                onPressed: () => Get.to(() => const SignupScreen()),
                 child: const Text(STexts.createAccount),
               ),
             ),
