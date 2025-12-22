@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,8 +6,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text("Agar buni ko'rsangiz, demak ilova ishlayabdi!"),
-    );
+    return Scaffold(body: Column(children: [Text("Hello World!")]));
   }
 }
