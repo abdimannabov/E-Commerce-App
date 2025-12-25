@@ -4,8 +4,9 @@ class SImages {
   static const String darkAppLogo = 'assets/logos/dark_app_logo.png';
 
   // My Social Logos
-  static const String googleLogo = 'assets/icons/google-icon.png';
-  static const String facebookLogo = 'assets/icons/facebook-icon.png';
+  static const String googleLogo = 'assets/icons/social_media/google-icon.png';
+  static const String facebookLogo =
+      'assets/icons/social_media/facebook-icon.png';
 
   // On Boarding Images
   static const String onBoardingImage1 =
@@ -19,4 +20,12 @@ class SImages {
   static const String verifyEmailImage =
       'assets/images/pictures/verify-email.png';
   static const String successEmailImage = 'assets/images/pictures/success.png';
+
+  // Categories images
+  static const String foodImage = 'assets/icons/categories/food.png';
+  static const String soupImage = 'assets/icons/categories/soup.png';
+  static const String steakImage = 'assets/icons/categories/steak.png';
+  static const String saladImage = 'assets/icons/categories/salad.png';
+  static const String drinksImage = 'assets/icons/categories/drink.png';
+  static const String breadImage = 'assets/icons/categories/bread.png';
 }

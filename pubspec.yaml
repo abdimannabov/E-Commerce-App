@@ -42,7 +42,8 @@ flutter:
   #-----------------My Assets-----------------#
   assets:
     - assets/images/
-    - assets/icons/
+    - assets/icons/social_media/
+    - assets/icons/categories/
     - assets/images/on_boarding_images/
     - assets/images/pictures/
     - assets/logos/

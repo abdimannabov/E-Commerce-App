@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../../common/widgets/appbar/widgets/home_appbar.dart';
+import 'package:iconsax/iconsax.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
+import 'widgets/home_appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/header_container.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../../common/widgets/custom_shapes/containers/search_bar.dart';
+import 'widgets/home_categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,11 +20,31 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   // Home App Bar here
-                  SHomeAppBar(),
+                  const SHomeAppBar(),
+                  const SizedBox(height: SSizes.spaceBtwSections),
 
                   // Search Bar here
+                  SSearchContainer(
+                    text: "Qidiruv",
+                    showBackGround: true,
+                    showBorder: true,
+                    icon: Iconsax.search_normal,
+                  ),
 
                   //Categories here
+                  Padding(
+                    padding: const EdgeInsets.all(SSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        // Heading part for category
+                        SSectionHeading(title: 'Trenddagi kategoriyalar'),
+                        const SizedBox(height: SSizes.spaceBtwItems),
+
+                        // Categories
+                        SHomeCategories(),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
