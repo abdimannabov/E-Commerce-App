@@ -36,6 +36,7 @@ class SPrimaryHeaderContainer extends StatelessWidget {
                   padding: 0,
                 ),
               ),
+              child,
             ],
           ),
         ),

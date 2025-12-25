@@ -66,4 +66,8 @@ class STexts {
       "Sizning eng yaxshi xarid qilish manzilingizga xush kelibsiz: Hisobingiz yaratildi, onlayn xarid qilishning zavqini oching!";
   static const String continueButton = "Davom etish";
   static const String submit = "Yuborish";
+
+  // Some text for app bar
+  static const String appBarTitle = "Hush kelibsiz!";
+  static const String appBarSubTitle = "Sohibjon A.";
 }
