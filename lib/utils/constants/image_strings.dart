@@ -28,4 +28,9 @@ class SImages {
   static const String saladImage = 'assets/icons/categories/salad.png';
   static const String drinksImage = 'assets/icons/categories/drink.png';
   static const String breadImage = 'assets/icons/categories/bread.png';
+
+  // Banners
+  static const plovImage = 'assets/images/banners/Plov.png';
+  static const samsaImage = 'assets/images/banners/Samsa.png';
+  static const ayranImage = 'assets/images/banners/Ayran.png';
 }

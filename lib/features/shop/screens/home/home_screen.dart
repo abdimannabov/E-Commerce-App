@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/constants/image_strings.dart';
 import 'widgets/home_appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/header_container.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_bar.dart';
 import 'widgets/home_categories.dart';
+import 'widgets/promo_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -47,6 +49,15 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+
+            // Body - Image Carousel
+            SPromoSlider(
+              banners: [
+                SImages.plovImage,
+                SImages.samsaImage,
+                SImages.ayranImage,
+              ],
             ),
           ],
         ),
