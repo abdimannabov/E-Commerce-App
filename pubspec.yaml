@@ -49,6 +49,7 @@ flutter:
     - assets/icons/categories/
     - assets/images/on_boarding_images/
     - assets/images/pictures/
+    - assets/images/products/
     - assets/images/banners/
     - assets/logos/
 

@@ -33,4 +33,16 @@ class SImages {
   static const plovImage = 'assets/images/banners/Plov.png';
   static const samsaImage = 'assets/images/banners/Samsa.png';
   static const ayranImage = 'assets/images/banners/Ayran.png';
+
+  // Products
+  static const productLagman = 'assets/images/products/Lagman.png';
+  static const productManti = 'assets/images/products/Manti.png';
+  static const productOsh = 'assets/images/products/Osh.png';
+  static const productShurva = 'assets/images/products/Shurva.png';
+  static const productAchichuk = 'assets/images/products/Achichuk.png';
+  static const productGreenTea = 'assets/images/products/Green_tea.png';
+  static const productNarin = 'assets/images/products/Narin.png';
+  static const productAyran1 = 'assets/images/products/Ayran1.png';
+  static const productKampot = 'assets/images/products/Kampot.png';
+  static const productMastava = 'assets/images/products/Mastava.png';
 }

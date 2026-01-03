@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/product_card/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import 'widgets/home_appbar.dart';
@@ -52,12 +54,26 @@ class HomeScreen extends StatelessWidget {
             ),
 
             // Body - Image Carousel
-            SPromoSlider(
-              banners: [
-                SImages.plovImage,
-                SImages.samsaImage,
-                SImages.ayranImage,
-              ],
+            Padding(
+              padding: const EdgeInsets.all(SSizes.defaultSpace),
+              child: Column(
+                children: [
+                  SPromoSlider(
+                    banners: [
+                      SImages.plovImage,
+                      SImages.samsaImage,
+                      SImages.ayranImage,
+                    ],
+                  ),
+                  const SizedBox(height: SSizes.spaceBtwSections),
+
+                  // Products
+                  SGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => SProductVertical(),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
