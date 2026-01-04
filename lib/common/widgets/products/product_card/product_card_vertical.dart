@@ -89,19 +89,23 @@ class SProductVertical extends StatelessWidget {
                   // title
                   SProductTitleText(title: "Osh", smallSize: false),
                   SizedBox(height: SSizes.spaceBtwItems / 2),
+                ],
+              ),
+            ),
 
-                  // price + add button
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // price
-                      SProductPriceText(price: '35.000 UZS'),
-                      // button
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Iconsax.add_circle, size: SSizes.iconLg),
-                      ),
-                    ],
+            Spacer(),
+            // price + add button
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // price
+                  SProductPriceText(price: '35.000 UZS'),
+                  // button
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Iconsax.add_circle, size: SSizes.iconLg),
                   ),
                 ],
               ),

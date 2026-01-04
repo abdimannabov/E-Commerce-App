@@ -5,9 +5,7 @@ import '../../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../../utils/constants/colors.dart';
 
 class SHomeAppBar extends StatelessWidget {
-  const SHomeAppBar({
-    super.key,
-  });
+  const SHomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +21,13 @@ class SHomeAppBar extends StatelessWidget {
           ),
           Text(
             STexts.appBarSubTitle,
-            style: Theme.of(context).textTheme.headlineMedium!
-                .apply(color: SColors.white),
+            style: Theme.of(
+              context,
+            ).textTheme.headlineMedium!.apply(color: SColors.white),
           ),
         ],
       ),
-      action: [SCartCounterIcon(onPressed: () {}, iconColor: SColors.white,)],
+      action: [SCartCounterIcon(onPressed: () {})],
     );
   }
 }

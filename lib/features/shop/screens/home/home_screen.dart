@@ -67,6 +67,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: SSizes.spaceBtwSections),
 
+                  // Popular products
+                  SSectionHeading(title: 'Sotuv xitlari'),
+                  SizedBox(height: SSizes.spaceBtwSections),
+
                   // Products
                   SGridLayout(
                     itemCount: 4,
