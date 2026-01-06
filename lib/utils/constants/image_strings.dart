@@ -45,4 +45,7 @@ class SImages {
   static const productAyran1 = 'assets/images/products/Ayran1.png';
   static const productKampot = 'assets/images/products/Kampot.png';
   static const productMastava = 'assets/images/products/Mastava.png';
+
+  // User
+  static const userPicture = 'assets/images/user/user.png';
 }

@@ -52,6 +52,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: SSizes.spaceBtwSections),
 
             // Body - Image Carousel
             Padding(

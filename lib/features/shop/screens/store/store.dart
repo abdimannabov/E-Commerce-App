@@ -1,16 +1,11 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_bar.dart';
-import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../../common/widgets/appbar/tabbar.dart';
-import '../../../../common/widgets/layouts/grid_layout.dart';
-import '../../../../common/widgets/products/product_card/product_card_vertical.dart';
 import '../../../../utils/constants/colors.dart';
 import 'widgets/category_tab.dart';
 
@@ -24,7 +19,7 @@ class StoreScreen extends StatelessWidget {
       child: Scaffold(
         appBar: SAppBar(
           title: Text(
-            "Store",
+            "Do'kon",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           action: [SCartCounterIcon(onPressed: () {})],
