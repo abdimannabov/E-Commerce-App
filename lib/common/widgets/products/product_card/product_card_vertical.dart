@@ -3,11 +3,13 @@ import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_c
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_price.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
+import 'package:e_commerce_app/features/shop/screens/product_details/product_details.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../icons/circular_icon.dart';
@@ -20,7 +22,7 @@ class SProductVertical extends StatelessWidget {
     final dark = SHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailsScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

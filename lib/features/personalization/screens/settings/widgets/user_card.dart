@@ -31,7 +31,7 @@ class SUserCard extends StatelessWidget {
         ).textTheme.bodyMedium!.apply(color: SColors.white),
       ),
       trailing: IconButton(
-        onPressed: () => Get.to(const ProfileScreen()),
+        onPressed: () => Get.to(() => const ProfileScreen()),
         icon: Icon(
           Iconsax.edit,
           color: SHelperFunctions.isDarkMode(context)

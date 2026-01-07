@@ -24,7 +24,7 @@ class SettingsScreen extends StatelessWidget {
                   // Appbar here
                   SAppBar(
                     title: Text(
-                      "Settings",
+                      "Sozlamalar",
                       style: Theme.of(
                         context,
                       ).textTheme.headlineMedium!.apply(color: SColors.white),
@@ -40,17 +40,17 @@ class SettingsScreen extends StatelessWidget {
             ),
 
             Padding(
-              padding: const EdgeInsets.all(SSizes.defaultSpace),
+              padding: const EdgeInsets.all(SSizes.spaceBtwItems),
               child: Column(
                 children: [
                   // Account Settings
 
                   // Header
                   const SSectionHeading(
-                    title: "Sozlamalar",
+                    title: "Asosiy",
                     showActionButton: false,
                   ),
-                  const SizedBox(height: SSizes.spaceBtwSections),
+                  const SizedBox(height: SSizes.spaceBtwItems),
 
                   // Menu
                   // Account settings

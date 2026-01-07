@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class SProfileMenu extends StatelessWidget {
@@ -20,10 +19,7 @@ class SProfileMenu extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title, style: Theme.of(context).textTheme.bodyLarge),
-          Text(
-            value,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
+          Text(value, style: Theme.of(context).textTheme.bodyMedium),
           const Divider(),
         ],
       ),
