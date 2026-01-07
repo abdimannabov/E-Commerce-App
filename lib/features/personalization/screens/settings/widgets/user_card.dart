@@ -1,14 +1,14 @@
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/features/personalization/screens/profile/profile.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/colors.dart';
 
 class SUserCard extends StatelessWidget {
-  const SUserCard({
-    super.key,
-  });
+  const SUserCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,13 @@ class SUserCard extends StatelessWidget {
         ).textTheme.bodyMedium!.apply(color: SColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
-        icon: Icon(Iconsax.edit, color: SHelperFunctions.isDarkMode(context) ? SColors.white : SColors.black,),
+        onPressed: () => Get.to(const ProfileScreen()),
+        icon: Icon(
+          Iconsax.edit,
+          color: SHelperFunctions.isDarkMode(context)
+              ? SColors.white
+              : SColors.black,
+        ),
       ),
     );
   }

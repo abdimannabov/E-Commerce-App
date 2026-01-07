@@ -6,7 +6,7 @@ import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
-import '../profile/user_card.dart';
+import 'widgets/user_card.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
