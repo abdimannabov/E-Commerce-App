@@ -6,9 +6,10 @@ import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class SReviewsMap extends StatelessWidget {
-  const SReviewsMap({super.key, required this.reviewCount});
+  const SReviewsMap({super.key, required this.reviewCount, this.onPressed});
 
   final String reviewCount;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,10 @@ class SReviewsMap extends StatelessWidget {
 
             Spacer(),
 
-            Icon(Iconsax.arrow_right_3),
+            GestureDetector(
+              onTap: onPressed,
+              child: Icon(Iconsax.arrow_right_3),
+            ),
             const SizedBox(width: SSizes.sm),
           ],
         ),

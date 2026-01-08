@@ -1,10 +1,12 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/curve_shapes/curved_edges_widget.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../common/widgets/buttons/purchase_button.dart';
 import '../../../../common/widgets/icons/circular_icon.dart';
@@ -93,7 +95,10 @@ class ProductDetailsScreen extends StatelessWidget {
             const SizedBox(height: SSizes.spaceBtwSections),
 
             const Divider(),
-            SReviewsMap(reviewCount: "200 ta ovoz"),
+            SReviewsMap(
+              reviewCount: "200 ta ovoz",
+              onPressed: () => Get.to(() => const ProductReviewsScreen()),
+            ),
 
             // Purchase button
             SPurchaseButton(price: "35.000 UZS", onPressed: () {}),
