@@ -6,10 +6,12 @@ import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
+import '../../../../common/widgets/buttons/purchase_button.dart';
 import '../../../../common/widgets/icons/circular_icon.dart';
 import '../../../../utils/constants/colors.dart';
 import 'widgets/product_ingredients.dart';
+import 'widgets/ratings_share.dart';
+import 'widgets/reviews_map.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
@@ -58,6 +60,14 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
 
+            // Ratings + share
+            SRatingsShare(
+              rating: "4.9",
+              reviewCount: "(200 ta ovoz)",
+              icon: Icons.share,
+            ),
+            const SizedBox(height: SSizes.spaceBtwItems),
+
             // Details
             SSectionHeading(title: "Osh", showActionButton: false),
             const SizedBox(height: SSizes.spaceBtwItems),
@@ -82,18 +92,12 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
             const SizedBox(height: SSizes.spaceBtwSections),
 
+            const Divider(),
+            SReviewsMap(reviewCount: "200 ta ovoz"),
+
             // Purchase button
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: SColors.primary,
-                side: BorderSide.none
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: SSizes.md),
-                child: Text("Buyurtma qilish - 35.000 UZS"),
-              ),
-            ),
+            SPurchaseButton(price: "35.000 UZS", onPressed: () {}),
+            const SizedBox(height: SSizes.defaultSpace),
           ],
         ),
       ),
