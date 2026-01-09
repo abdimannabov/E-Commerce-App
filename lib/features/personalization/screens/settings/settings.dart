@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../shop/screens/cart/cart.dart';
 import 'widgets/user_card.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -62,10 +63,11 @@ class SettingsScreen extends StatelessWidget {
                     subtitle: "Eltib berish joyini tahrirlash",
                     onTap: () => Get.to(() => const AddressesScreen()),
                   ),
-                  const SSettingsMenu(
+                  SSettingsMenu(
                     icon: Iconsax.shopping_cart,
                     title: "Mening savatim",
                     subtitle: "Mahsulot qo'shish/olib tashlash/buyurtma berish",
+                    onTap: () => Get.to(() => const CartScreen()),
                   ),
                   const SSettingsMenu(
                     icon: Iconsax.bag_tick,
