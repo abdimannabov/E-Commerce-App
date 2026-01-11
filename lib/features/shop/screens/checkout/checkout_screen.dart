@@ -1,7 +1,10 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
+import 'package:e_commerce_app/common/widgets/status/payment/payment_failure.dart';
+import 'package:e_commerce_app/common/widgets/status/payment/payment_success.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../common/widgets/products/promo_code/promo_code.dart';
 import '../../../../common/widgets/user_cards/card.dart';
 
@@ -86,7 +89,7 @@ class CheckoutScreen extends StatelessWidget {
                 const SizedBox(height: SSizes.defaultSpace * 2),
 
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const PaymentSuccess()),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: SColors.primary,
                     side: BorderSide.none,
