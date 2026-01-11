@@ -16,15 +16,15 @@ class PaymentSuccess extends StatelessWidget {
             Column(
               children: [
                 const Icon(
-              Icons.check_circle_outline,
-              color: Colors.green,
-              size: 100,
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'Payment Successful!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
+                  Icons.check_circle_outline,
+                  color: Colors.green,
+                  size: 100,
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  'Muvaffaqiyat!',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
               ],
             ),
             const SizedBox(height: SSizes.spaceBtwSections),

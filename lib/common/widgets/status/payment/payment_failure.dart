@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/features/shop/screens/home/home_screen.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +17,7 @@ class PaymentFailure extends StatelessWidget {
                 const Icon(Icons.error_outline, color: Colors.red, size: 100),
                 const SizedBox(height: 20),
                 const Text(
-                  'Payment Failed!',
+                  'Xatolik!',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ],

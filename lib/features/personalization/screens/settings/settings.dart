@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../shop/screens/cart/cart.dart';
+import '../../../shop/screens/orders/orders_screen.dart';
 import 'widgets/user_card.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -69,10 +70,11 @@ class SettingsScreen extends StatelessWidget {
                     subtitle: "Mahsulot qo'shish/olib tashlash/buyurtma berish",
                     onTap: () => Get.to(() => const CartScreen()),
                   ),
-                  const SSettingsMenu(
+                  SSettingsMenu(
                     icon: Iconsax.bag_tick,
                     title: "Mening buyurtmalarim",
                     subtitle: "Buyurtmalar tarixi",
+                    onTap: () => Get.to(() => const OrdersScreen()),
                   ),
                   const SSettingsMenu(
                     icon: Iconsax.bank,
@@ -124,7 +126,7 @@ class SettingsScreen extends StatelessWidget {
                       child: Text("Chiqish"),
                     ),
                   ),
-                  const SizedBox(height: SSizes.spaceBtwSections,)
+                  const SizedBox(height: SSizes.spaceBtwSections),
                 ],
               ),
             ),

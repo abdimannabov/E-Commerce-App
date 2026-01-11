@@ -1,5 +1,4 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
-import 'package:e_commerce_app/common/widgets/status/payment/payment_failure.dart';
 import 'package:e_commerce_app/common/widgets/status/payment/payment_success.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
