@@ -4,9 +4,11 @@ import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart'
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../utils/constants/colors.dart';
+import '../cart/cart.dart';
 import 'widgets/category_tab.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -22,7 +24,7 @@ class StoreScreen extends StatelessWidget {
             "Do'kon",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          action: [SCartCounterIcon(onPressed: () {})],
+          action: [SCartCounterIcon(onPressed: () => Get.to(() => const CartScreen()))],
         ),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
