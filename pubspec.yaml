@@ -33,6 +33,9 @@ dependencies:
   # Some usefull packages
   carousel_slider: ^5.1.1
 
+  # Firebase packages
+  firebase_core: ^4.3.0
+
 #----------------End Packages----------------#
 
 dev_dependencies:
