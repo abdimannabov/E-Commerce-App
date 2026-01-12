@@ -33,6 +33,9 @@ class SImages {
   static const plovImage = 'assets/images/banners/Plov.png';
   static const samsaImage = 'assets/images/banners/Samsa.png';
   static const ayranImage = 'assets/images/banners/Ayran.png';
+  static const deliveredImage = 'assets/images/banners/delivered.png';
+  static const waitingImage = 'assets/images/banners/waiting.png';
+  static const failureImage = 'assets/images/banners/failure.png';
 
   // Products
   static const productLagman = 'assets/images/products/Lagman.png';

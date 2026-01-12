@@ -8,7 +8,6 @@ class OrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = SHelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: SAppBar(
         title: Text(

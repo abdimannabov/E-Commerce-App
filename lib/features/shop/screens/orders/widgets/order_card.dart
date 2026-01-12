@@ -1,7 +1,9 @@
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:e_commerce_app/features/shop/screens/orders/widgets/order_details.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../utils/constants/colors.dart';
 import 'status_indicator.dart';
 
@@ -41,7 +43,10 @@ class SOrderCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        SStatusIndicator(isCompleted: isCompleted, isPending: isPending),
+                        SStatusIndicator(
+                          isCompleted: isCompleted,
+                          isPending: isPending,
+                        ),
                         const SizedBox(width: SSizes.spaceBtwItems),
 
                         Column(
@@ -60,7 +65,7 @@ class SOrderCard extends StatelessWidget {
                         Spacer(),
 
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => OrderDetails()),
                           icon: Icon(Icons.arrow_forward_ios),
                         ),
                       ],
@@ -98,8 +103,7 @@ class SOrderCard extends StatelessWidget {
 
                     Row(
                       children: [
-                        SizedBox(
-                          width: 180,
+                        Expanded(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.red,
@@ -109,9 +113,8 @@ class SOrderCard extends StatelessWidget {
                             child: Text("Muammo!"),
                           ),
                         ),
-                        Spacer(),
-                        SizedBox(
-                          width: 180,
+                        SizedBox(width: 12),
+                        Expanded(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.yellow,
