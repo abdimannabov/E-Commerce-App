@@ -51,4 +51,7 @@ class SImages {
 
   // User
   static const userPicture = 'assets/images/user/user.png';
+
+  // Loading indicator
+  static const loading = 'assets/icons/loading/loading.json';
 }

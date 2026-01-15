@@ -1,4 +1,13 @@
 class SValidator {
+  // Helper to validate empty text
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is Required';
+    }
+
+    return null;
+  }
+
   //Helper to validate email format
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
