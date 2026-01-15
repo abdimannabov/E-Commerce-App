@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 import '../../screens/login/login.dart';
 
@@ -25,6 +26,8 @@ class OnBoardingController extends GetxController {
   void nextPage() {
     // If we're already on the last page or beyond, navigate to login.
     if (currentPageIndex.value >= 2) {
+      final storage = GetStorage();
+      storage.write('isFirstTime', false);
       // Schedule navigation after the current frame to avoid layout/navigation race
       // conditions that can produce RenderBox layout errors.
       WidgetsBinding.instance.addPostFrameCallback((_) {

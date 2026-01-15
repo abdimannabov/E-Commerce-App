@@ -104,6 +104,7 @@ class SOrderCard extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
+                          flex: 2,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.red,
@@ -115,15 +116,21 @@ class SOrderCard extends StatelessWidget {
                         ),
                         SizedBox(width: 12),
                         Expanded(
+                          flex: 3,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.yellow,
                               side: BorderSide.none,
                             ),
                             onPressed: () {},
-                            child: Text(
-                              "Qayta buyurtma berish",
-                              style: TextStyle(color: Colors.black),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 4.0,
+                              ),
+                              child: Text(
+                                "Qayta buyurtma berish",
+                                style: TextStyle(color: Colors.black),
+                              ),
                             ),
                           ),
                         ),
