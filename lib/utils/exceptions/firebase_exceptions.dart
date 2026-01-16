@@ -6,17 +6,17 @@ class SFirebaseException implements Exception {
   String get message {
     switch (code) {
       case 'permission-denied':
-        return 'You do not have permission to perform this action.';
+        return 'Sizda ushbu amalni bajarish uchun ruxsat yo‘q.';
       case 'unavailable':
-        return 'The server is currently unavailable. Please try again later.';
+        return 'Server bilan aloqa yo‘q. Keyinroq qayta urining.';
       case 'weak-password':
-        return 'The password provided is too weak.';
+        return 'Parol juda oddiy. Kuchliroq parol tanlang.';
       case 'email-already-in-use':
-        return 'The account already exists for that email.';
+        return 'Ushbu email bilan allaqachon ro‘yxatdan o‘tilgan.';
       case 'invalid-email':
-        return 'The email address is malformed.';
+        return 'Email manzili noto‘g‘ri kiritildi.';
       default:
-        return 'A Firebase error occurred. Please try again.';
+        return 'Tizimda xatolik yuz berdi. Qayta urinib ko‘ring.';
     }
   }
 }

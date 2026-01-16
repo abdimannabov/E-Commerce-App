@@ -83,7 +83,7 @@ class SignupController extends GetxController {
         message: "Hisobingiz yaratildi. Tasdiqlash uchun emailga o'ting.",
       );
 
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       SFullScreenLoader.stopLoading();
       SLoaders.errorSnackBar(title: "Xatolik!", message: e.toString());

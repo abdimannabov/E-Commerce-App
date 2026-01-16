@@ -1,5 +1,5 @@
 class SFormatException implements Exception {
   const SFormatException();
 
-  String get message => 'Invalid data format.';
+  String get message => "Ma'lumot formati to'gri emas.";
 }

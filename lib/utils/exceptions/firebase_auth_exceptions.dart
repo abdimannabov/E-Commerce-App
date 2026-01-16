@@ -10,91 +10,88 @@ class SFirebaseAuthException implements Exception {
   String get message {
     switch (code) {
       case 'too-many-requests':
-        return 'Temporarily unavailable. We have blocked all requests from this device due to unusual activity.';
+        return 'Vaqtincha bloklandingiz. Ko‘p urinish tufayli birozdan so‘ng qayta urining.';
       case 'email-already-in-use':
-        return 'The email address is already registered. Please use a different email.';
+        return 'Bu email band. Iltimos, boshqa email kiriting.';
       case 'invalid-email':
-        return 'The email address provided is invalid. Please enter a valid email.';
+        return 'Email xato kiritildi. Iltimos, tekshirib ko‘ring.';
       case 'weak-password':
-        return 'The password is too weak. Please choose a stronger password.';
+        return 'Parol juda oddiy. Kuchliroq parol tanlang.';
       case 'user-disabled':
-        return 'This user account has been disabled. Please contact support for assistance.';
+        return 'Ushbu profil bloklangan. Qo‘llab-quvvatlash xizmatiga murojaat qiling.';
       case 'user-not-found':
-        return 'Invalid login details. User not found.';
+        return 'Ma’lumotlar noto‘g‘ri. Foydalanuvchi topilmadi.';
       case 'wrong-password':
-        return 'Incorrect password. Please check your password and try again.';
+        return 'Parol xato. Iltimos, qayta urinib ko‘ring.';
       case 'invalid-verification-code':
-        return 'Invalid verification code. Please enter a valid code.';
+        return 'Tasdiqlash kodi xato.';
       case 'invalid-verification-id':
-        return 'Invalid verification ID. Please request a new verification code.';
+        return 'Tasdiqlash IDsi xato. Yangi kod so‘rang.';
       case 'quota-exceeded':
-        return 'Quota exceeded. Please try again later.';
+        return 'Limit tugadi. Birozdan so‘ng qayta urining.';
       case 'email-already-exists':
-        return 'The email address already exists. Please use a different email.';
+        return 'Bu email ro‘yxatdan o‘tgan. Boshqa email foydalaning.';
       case 'provider-already-linked':
-        return 'The account is already linked with another provider.';
+        return 'Hisob allaqachon boshqa usul bilan bog‘langan.';
       case 'requires-recent-login':
-        return 'This operation is sensitive and requires recent authentication. Please log in again.';
+        return 'Xavfsizlik yuzasidan tizimga qayta kiring.';
       case 'credential-already-in-use':
-        return 'This credential is already associated with a different user account.';
+        return 'Ushbu ma’lumotlar boshqa profilga tegishli.';
       case 'user-mismatch':
-        return 'The supplied credentials do not correspond to the previously signed in user.';
+        return 'Kiritilgan ma’lumotlar joriy foydalanuvchiga mos kelmadi.';
       case 'account-exists-with-different-credential':
-        return 'An account already exists with the same email but different sign-in credentials.';
+        return 'Bu email boshqa kirish usuli bilan ro‘yxatdan o‘tgan.';
       case 'operation-not-allowed':
-        return 'This operation is not allowed. Contact support for assistance.';
+        return 'Bu amalga ruxsat berilmagan.';
       case 'expired-action-code':
-        return 'The action code has expired. Please request a new action code.';
+        return 'Kodni amal qilish muddati tugagan. Yangi kod oling.';
       case 'invalid-action-code':
-        return 'The action code is invalid. Please check the code and try again.';
+        return 'Kod xato yoki yaroqsiz.';
       case 'missing-action-code':
-        return 'The action code is missing. Please provide a valid action code.';
+        return 'Tasdiqlash kodi kiritilmadi.';
       case 'user-token-expired':
-        return 'The user\'s token has expired, and authentication is required. Please sign in again.';
+        return 'Seans muddati tugadi. Tizimga qayta kiring.';
       case 'invalid-credential':
-        return 'The supplied credential is malformed or has expired.';
+        return 'Ma’lumotlar xato yoki muddati o‘tgan.';
       case 'user-token-revoked':
-        return 'The user\'s token has been revoked. Please sign in again.';
+        return 'Ruxsatnoma bekor qilingan. Qayta kiring.';
       case 'invalid-message-payload':
-        return 'The email template verification message payload is invalid.';
+        return 'Xabar formati noto‘g‘ri.';
       case 'invalid-sender':
-        return 'The email template sender is invalid. Please verify the sender\'s email.';
+        return 'Yuboruvchi ma’lumotlari xato.';
       case 'invalid-recipient-email':
-        return 'The recipient email address is invalid. Please provide a valid recipient email.';
+        return 'Qabul qiluvchi emaili xato.';
       case 'missing-iframe-start':
-        return 'The email template is missing the iframe start tag.';
       case 'missing-iframe-end':
-        return 'The email template is missing the iframe end tag.';
       case 'missing-iframe-dashboard':
-        return 'The email template is missing the iframe dashboard attribute.';
+        return 'Email shablonida xatolik bor.';
       case 'auth-domain-config-required':
-        return 'The authDomain configuration is required for the action code verification link.';
+        return 'Konfiguratsiya xatosi (authDomain).';
       case 'missing-app-credential':
-        return 'The app credential is missing. Please provide valid app credentials.';
       case 'invalid-app-credential':
-        return 'The app credential is invalid. Please provide a valid app credential.';
+        return 'Ilova ruxsatnomasi xato yoki mavjud emas.';
       case 'session-cookie-expired':
-        return 'The Firebase session cookie has expired. Please sign in again.';
+        return 'Sessiya muddati tugadi. Qayta kiring.';
       case 'uid-already-exists':
-        return 'The provided user ID is already in use by another user.';
+        return 'Foydalanuvchi IDsi band.';
       case 'invalid-cordova-configuration':
-        return 'The provided Cordova configuration is invalid.';
+        return 'Cordova sozlamalari xato.';
       case 'app-deleted':
-        return 'This instance of FirebaseApp has been deleted.';
+        return 'Ilova o‘chirib tashlangan.';
       case 'user-token-mismatch':
-        return 'The provided user\'s token has a mismatch with the authenticated user\'s user ID.';
+        return 'Foydalanuvchi ma’lumotlari mos kelmadi.';
       case 'web-storage-unsupported':
-        return 'Web storage is not supported or is disabled.';
+        return 'Brauzer xotirasi (Web storage) o‘chirilgan yoki qo‘llab-quvvatlanmaydi.';
       case 'app-not-authorized':
-        return 'The app is not authorized to use Firebase Authentication with the provided API key.';
+        return 'Ilova avtorizatsiyadan o‘ta olmadi.';
       case 'keychain-error':
-        return 'A keychain error occurred. Please check the keychain and try again.';
+        return 'Xotira bilan bog‘liq xatolik (Keychain).';
       case 'internal-error':
-        return 'An internal authentication error occurred. Please try again later.';
+        return 'Ichki xatolik yuz berdi. Keyinroq urining.';
       case 'INVALID_LOGIN_CREDENTIALS':
-        return 'Invalid login credentials.';
+        return 'Login yoki parol xato.';
       default:
-        return 'An unexpected authentication error occurred. Please try again.';
+        return 'Kutilmagan xatolik. Iltimos, qayta urining.';
     }
   }
 }
