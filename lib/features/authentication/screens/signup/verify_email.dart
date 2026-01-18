@@ -1,6 +1,5 @@
 import 'package:e_commerce_app/data/repositories/authentication/authentication_repository.dart';
 import 'package:e_commerce_app/features/authentication/controllers/sign_up/verify_email_controller.dart';
-import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
