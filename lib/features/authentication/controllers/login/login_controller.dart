@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/personalization/controllers/user_controller.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -14,6 +15,7 @@ class LoginController extends GetxController {
   final localStorage = GetStorage();
   final email = TextEditingController();
   final password = TextEditingController();
+  final userController = Get.put(UserController());
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   @override
@@ -64,6 +66,38 @@ class LoginController extends GetxController {
     } catch (e) {
       SFullScreenLoader.stopLoading();
       SLoaders.errorSnackBar(title: 'Xatolik!', message: e.toString());
+    }
+  }
+
+  Future<void> googleSignin() async {
+    try {
+      // Start loading
+      SFullScreenLoader.openLoadingDialog(
+        'Hisobga kirilmoqda',
+        SImages.loading,
+      );
+
+      // Check internet
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        SFullScreenLoader.stopLoading();
+        return;
+      }
+
+      // Google auth
+      final userCredentials = await AuthenticationRepository.instance
+          .signInWithGoogle();
+
+      // Save User Record
+      await userController.saveUserRecord(userCredentials);
+
+      SFullScreenLoader.stopLoading();
+
+      // Redirect user
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      SFullScreenLoader.stopLoading();
+      SLoaders.errorSnackBar(title: "Xatolik!", message: e.toString());
     }
   }
 }
