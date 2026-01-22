@@ -2,11 +2,14 @@ import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/features/personalization/controllers/user_controller.dart';
+import 'package:e_commerce_app/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'widgets/profile_menu.dart';
 
@@ -15,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return Scaffold(
       appBar: SAppBar(title: Text("Hisob ma'lumotlari"), showBackArrow: true),
       body: SingleChildScrollView(
@@ -56,13 +60,13 @@ class ProfileScreen extends StatelessWidget {
                   // Names
                   SProfileMenu(
                     title: "F.I.SH",
-                    value: "Sohibjon Abdimannabov",
-                    onPressed: () {},
+                    value: controller.user.value.fullName,
+                    onPressed: () => Get.to(() => const ChangeName()),
                   ),
                   SProfileMenu(
                     title: "Foydalanuvchi nomi",
-                    value: "@Sohib01",
-                    onPressed: () {},
+                    value: controller.user.value.username,
+                    onPressed: () => Get.to(() => const ChangeName()),
                   ),
                   const SizedBox(height: SSizes.spaceBtwItems),
 
@@ -74,12 +78,12 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(height: SSizes.spaceBtwItems),
                   SProfileMenu(
                     title: "Telefon raqam",
-                    value: "+998912345678",
+                    value: controller.user.value.phoneNumber,
                     onPressed: () {},
                   ),
                   SProfileMenu(
                     title: "Email",
-                    value: "example@gmail.com",
+                    value: controller.user.value.email,
                     onPressed: () {},
                   ),
                   SProfileMenu(
@@ -102,7 +106,7 @@ class ProfileScreen extends StatelessWidget {
                       ? SColors.black
                       : SColors.white,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => controller.deleteAccountWarningPopup(),
                     child: Text(
                       "Hisobni o'chirish",
                       style: Theme.of(

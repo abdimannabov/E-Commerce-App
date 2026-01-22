@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/features/personalization/controllers/user_controller.dart';
 import 'package:e_commerce_app/features/personalization/screens/profile/profile.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
@@ -12,6 +13,7 @@ class SUserCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return ListTile(
       leading: const SRoundedImage(
         width: 50,
@@ -19,13 +21,13 @@ class SUserCard extends StatelessWidget {
         imageUrl: SImages.userPicture,
       ),
       title: Text(
-        "Sohib Abdimannabov",
+        controller.user.value.fullName,
         style: Theme.of(
           context,
         ).textTheme.headlineSmall!.apply(color: SColors.white),
       ),
       subtitle: Text(
-        "abdumanobovsohib13@gmail.com",
+        controller.user.value.email,
         style: Theme.of(
           context,
         ).textTheme.bodyMedium!.apply(color: SColors.white),

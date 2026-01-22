@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/data/repositories/user/user_repo.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:e_commerce_app/features/authentication/screens/signup/verify_email.dart';
@@ -19,6 +20,9 @@ class AuthenticationRepository extends GetxController {
   // Vars
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+
+  // Get user data
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
@@ -171,6 +175,50 @@ class AuthenticationRepository extends GetxController {
     } on FormatException catch (_) {
       throw const SFormatException();
     } on PlatformException catch (e) {
+      throw SPlatformException(e.code).message;
+    } catch (e) {
+      throw "Nimadir xato ketdi. Iltimos keyinroq urinib ko'ring";
+    }
+  }
+
+  /// [ReAuthenticate] - Re Authenticate User
+  Future<void> reAuthenticateWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
+    try {
+      // Create a credential
+      AuthCredential credential = EmailAuthProvider.credential(
+        email: email,
+        password: password,
+      );
+
+      // reAuthenticate
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw SFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw SFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const SFormatException();
+    } on SPlatformException catch (e) {
+      throw SPlatformException(e.code).message;
+    } catch (e) {
+      throw "Nimadir xato ketdi. Iltimos keyinroq urinib ko'ring";
+    }
+  }
+
+  Future<void> deleteAccount() async {
+    try {
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser?.delete();
+    } on FirebaseAuthException catch (e) {
+      throw SFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw SFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const SFormatException();
+    } on SPlatformException catch (e) {
       throw SPlatformException(e.code).message;
     } catch (e) {
       throw "Nimadir xato ketdi. Iltimos keyinroq urinib ko'ring";
